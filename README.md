@@ -12,7 +12,6 @@ This project implements a **hybrid fake news detection system** that combines:
 
 Instead of relying only on textual features, the model also captures relationships between named entities using a knowledge graph, improving the understanding of contextual information within news statements.
 
----
 
 ## Features
 
@@ -24,8 +23,7 @@ Instead of relying only on textual features, the model also captures relationshi
 - Logistic Regression classifier
 - Graph visualization of important entities
 - Binary fake news classification
-
----
+  
 
 ## Dataset
 
@@ -51,7 +49,6 @@ For this project, these labels are converted into binary classes:
 | Mostly-true | True |
 | True | True |
 
----
 
 ## Technologies Used
 
@@ -63,7 +60,6 @@ For this project, these labels are converted into binary classes:
 - Matplotlib
 - SciPy
 
----
 
 ## Project Workflow
 
@@ -71,7 +67,6 @@ For this project, these labels are converted into binary classes:
 
 The LIAR dataset is loaded into Pandas DataFrames for training, testing, and validation.
 
----
 
 ### 2. Text Preprocessing
 
@@ -82,7 +77,6 @@ Each statement undergoes preprocessing:
 - Remove numbers
 - Remove extra whitespace
 
----
 
 ### 3. Named Entity Recognition
 
@@ -103,7 +97,6 @@ Extracted entities:
 - Barack Obama
 - Washington
 
----
 
 ### 4. Knowledge Graph Construction
 
@@ -115,7 +108,6 @@ Using NetworkX:
 
 True statements increase an entity's score, while false statements decrease it.
 
----
 
 ### 5. Graph-Based Feature
 
@@ -123,7 +115,6 @@ Each statement receives a graph score by averaging the credibility scores of its
 
 This score provides contextual information beyond the raw text.
 
----
 
 ### 6. TF-IDF Feature Extraction
 
@@ -133,7 +124,6 @@ Maximum vocabulary size:
 
 - 500 features
 
----
 
 ### 7. Feature Combination
 
@@ -144,7 +134,6 @@ Combined Features:
 - TF-IDF vector
 - Graph credibility score
 
----
 
 ### 8. Classification
 
@@ -152,7 +141,6 @@ A Logistic Regression classifier is trained using the combined features.
 
 Performance is evaluated using classification accuracy.
 
----
 
 ### 9. Graph Visualization
 
@@ -160,7 +148,6 @@ The project visualizes the most connected entities in the knowledge graph using 
 
 This helps understand relationships between frequently occurring entities.
 
----
 
 ## Project Structure
 
@@ -172,7 +159,6 @@ This helps understand relationships between frequently occurring entities.
 ├── README.md
 ```
 
----
 
 ## Installation
 
@@ -201,7 +187,6 @@ Download the spaCy language model:
 python -m spacy download en_core_web_sm
 ```
 
----
 
 ## Running the Project
 
@@ -213,7 +198,7 @@ jupyter notebook codefile.ipynb
 
 Run all cells sequentially.
 
----
+
 
 ## Output
 
@@ -224,7 +209,7 @@ The notebook provides:
 - Knowledge graph visualization
 - Top connected entities
 
----
+
 
 ## Future Improvements
 
@@ -234,14 +219,10 @@ The notebook provides:
 - Multi-class classification instead of binary labels
 - Deploy as a web application using Flask or Streamlit
 
----
+
 
 ## Learning Outcomes
 
 This project demonstrates how to combine traditional NLP techniques with graph-based representations for fake news detection. By integrating entity relationships with textual features, the model captures contextual information that may improve classification performance.
 
----
 
-## License
-
-This project is intended for educational and research purposes.
